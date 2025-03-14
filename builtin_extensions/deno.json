@@ -1,0 +1,8 @@
+{
+  "name": "@tstk/builtin-extensions",
+  "exports": {
+    ".": "./mod.ts",
+    "./array": "./lib/array/mod.ts",
+    "./map": "./lib/map/mod.ts"
+  }
+}

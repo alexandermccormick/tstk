@@ -1,0 +1,10 @@
+{
+  "name": "@tstk/utils",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./mod.ts",
+    "./array": "./lib/array/mod.ts",
+    "./array/filter_in_place": "./lib/array/filter_in_place.ts",
+    "./interval": "./lib/interval/mod.ts"
+  }
+}

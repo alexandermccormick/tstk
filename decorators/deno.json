@@ -1,0 +1,7 @@
+{
+  "name": "@tstk/decorators",
+  "exports": {
+    ".": "./mod.ts",
+    "./singleton": "./lib/singleton/mod.ts"
+  }
+}

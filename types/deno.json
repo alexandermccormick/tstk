@@ -1,0 +1,4 @@
+{
+  "name": "@tstk/types",
+  "exports": "./mod.ts"
+}

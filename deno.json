@@ -1,0 +1,15 @@
+{
+  "name": "@tstk/full",
+  "tasks": {
+    "dev": "deno run --watch main.ts"
+  },
+  "workspace": [
+    "./builtin_extensions",
+    "./decorators",
+    "./types",
+    "./utils"
+  ],
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1"
+  }
+}
