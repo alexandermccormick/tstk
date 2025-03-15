@@ -1,6 +1,7 @@
 {
   "name": "@tstk/utils",
   "version": "1.0.0",
+  "license": "MIT",
   "exports": {
     ".": "./mod.ts",
     "./array": "./lib/array/mod.ts",

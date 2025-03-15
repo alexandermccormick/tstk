@@ -1,4 +1,6 @@
 {
   "name": "@tstk/types",
-  "exports": "./mod.ts"
+  "exports": "./mod.ts",
+  "version": "1.0.0",
+  "license": "MIT"
 }

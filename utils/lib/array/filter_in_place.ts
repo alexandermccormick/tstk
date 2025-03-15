@@ -18,7 +18,7 @@ export type FilterPredicate<T> = (
 export function filterInPlace<T>(
   array: Array<T>,
   predicate: FilterPredicate<T>,
-) {
+): Array<T> {
   let i = 0;
   let j = 0;
 

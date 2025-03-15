@@ -12,7 +12,7 @@ export class Interval {
   /**
    * Checks if interval is currently running.
    */
-  get isActive() {
+  get isActive(): boolean {
     return this.interval !== undefined;
   }
 
