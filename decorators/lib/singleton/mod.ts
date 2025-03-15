@@ -1,4 +1,4 @@
-const SINGLETON_KEY = Symbol();
+const SINGLETON_KEY: unique symbol = Symbol();
 
 // deno-lint-ignore no-explicit-any
 export type Singleton<T extends new (...args: Array<any>) => any> =
@@ -15,7 +15,7 @@ export type Singleton<T extends new (...args: Array<any>) => any> =
 // deno-lint-ignore no-explicit-any
 export function Singleton<T extends new (...args: Array<any>) => any>(
   type: T,
-) {
+): T {
   return new Proxy(type, {
     construct(target: Singleton<T>, argsList, newTarget) {
       // Skip the children
