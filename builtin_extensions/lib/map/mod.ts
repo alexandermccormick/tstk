@@ -21,9 +21,23 @@
  *      return myMap.get("mykey"); // number
  *    }
  */
-
 export interface XMap<K, V> extends Map<K, V> {
   has<P extends K>(key: P): this is { get(key: P): V } & this;
 }
 
+/**
+ * An extension of the Map built-in object.
+ */
 export class XMap<K, V> extends Map<K, V> {}
+
+const myValue: Array<[string, number]> = [["mykey", 0]];
+const oldMap = new Map<string, number>(myValue); // Map(1) { "mykey" => 0 }
+const myMap = new XMap<string, number>(myValue); // XMap(1) [Map] { "mykey" => 0 }
+
+if (myMap.has("mykey")) {
+  let _a: number = myMap.get("mykey"); // number
+}
+
+if (oldMap.has("mykey")) {
+  let _b: number = oldMap.get("mykey"); // number
+}
