@@ -22,6 +22,9 @@
  *    }
  */
 export interface XMap<K, V> extends Map<K, V> {
+  /**
+   * @returns - boolean indicating whether an element with the specified key exists or not.
+   */
   has<P extends K>(key: P): this is { get(key: P): V } & this;
 }
 
