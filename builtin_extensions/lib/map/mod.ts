@@ -21,6 +21,9 @@
  *      return myMap.get("mykey"); // number
  *    }
  */
+/**
+ * An extension of the Map built-in object.
+ */
 export interface XMap<K, V> extends Map<K, V> {
   /**
    * @returns - boolean indicating whether an element with the specified key exists or not.
