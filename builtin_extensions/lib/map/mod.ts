@@ -1,6 +1,7 @@
 /**
  * An extension of the Map built-in object.
  *
+ * @example
  * ```ts
  * const myValue: Array<[string, number]> = [["mykey", 0]];
  * const oldMap = new Map<string, number>(myValue); // Map(1) { "mykey" => 0 }

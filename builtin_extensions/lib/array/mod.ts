@@ -1,6 +1,7 @@
 /**
  * An extended implimentation of the "Array" built-in object.
  *
+ * @example
  * ```ts
  * const myArr = new XArray();
  * myArr.push(1, 2, 3, 4);
