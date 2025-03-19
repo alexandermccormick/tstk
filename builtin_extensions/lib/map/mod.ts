@@ -1,26 +1,24 @@
-/*
- * This is a bit of a typescript hack to avoid having to add the
- * non-null assertion operator on calls to the "get" method after verifying
- * the key exists with the "has" method
+/**
+ * An extension of the Map built-in object.
  *
- * Example:
+ * ```ts
+ * const myValue: Array<[string, number]> = [["mykey", 0]];
+ * const oldMap = new Map<string, number>(myValue); // Map(1) { "mykey" => 0 }
+ * const myMap = new XMap<string, number>(myValue); // XMap(1) [Map] { "mykey" => 0 }
  *
- *  Regular Map:
- *    const myMap = new Map<string, number>();
- *    myMap.set("mykey", 0);
+ * if (oldMap.has("mykey")) {
+ *   // TypeError: Type "number | undefined" is not assignable to type "number"
+ *   let _a: number = oldMap.get("mykey"); // number
+ * }
  *
- *    if (myMap.has("mykey")) {
- *      return myMap.get("mykey"); // Object is possibly undefined
- *    }
- *
- *  XMap:
- *    const myMap = new XMap<string, number>();
- *    myMap.set("mykey", 0);
- *
- *    if (myMap.has("mykey")) {
- *      return myMap.get("mykey"); // number
- *    }
+ * if (myMap.has("mykey")) {
+ *   // Known existing keys will return accurate types
+ *   let _b: number = myMap.get("mykey");
+ * }
+ * ```
+ * @module
  */
+
 /**
  * An extension of the Map built-in object.
  */
