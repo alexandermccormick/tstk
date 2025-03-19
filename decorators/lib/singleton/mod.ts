@@ -23,7 +23,7 @@
  * ```ts
  * import { Singleton, SINGLETON_KEY } from "@tstk/decorators"
  *
- * @Singleton
+ * \@Singleton
  * class Example {}
  *
  * const instance = new Example()
