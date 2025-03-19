@@ -1,8 +1,7 @@
 /**
  * A collection of classes extending the functionality of standard built-in objects
  *
- * Array:
- * @example
+ * @example Extended Array
  * ```ts
  * const myArr = new XArray();
  * myArr.push(1, 2, 3, 4);
@@ -14,8 +13,7 @@
  * console.log(myArr); // XArray(2) [ 2, 4 ]
  * ```
  *
- * Map:
- * @example
+ * @example Extended Map
  * ```ts
  * const myValue: Array<[string, number]> = [["mykey", 0]];
  * const oldMap = new Map<string, number>(myValue); // Map(1) { "mykey" => 0 }
