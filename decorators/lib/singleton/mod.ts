@@ -5,7 +5,7 @@
  * ```ts
  * import { Singleton } from "@tstk/decorators"
  *
- * @Singleton
+ * \@Singleton
  * class Example {}
  *
  * const instance1 = new Example()
@@ -51,7 +51,7 @@ export type Singleton<T extends new (...args: Array<any>) => any> =
  * ```ts
  * import { Singleton } from "@tstk/decorators"
  *
- * @Singleton
+ * \@Singleton
  * class Example {}
  *
  * const instance1 = new Example()

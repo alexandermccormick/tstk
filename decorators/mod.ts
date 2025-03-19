@@ -5,7 +5,7 @@
  * ```ts
  * import { Singleton } from "@tstk/decorators"
  *
- * @Singleton
+ * \@Singleton
  * class Example {}
  *
  * const instance1 = new Example()
