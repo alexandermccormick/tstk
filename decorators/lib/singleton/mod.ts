@@ -1,5 +1,40 @@
-const SINGLETON_KEY: unique symbol = Symbol();
+/**
+ * Extends a given class to ensure there is only ever a single instance.
+ *
+ * @example Singleton
+ * ```ts
+ * import { Singleton } from "@tstk/decorators"
+ *
+ * @Singleton
+ * class Example {}
+ *
+ * const instance1 = new Example()
+ * const instance2 = new Example()
+ * console.log(instance1 === instance2) // prints `true`
+ * ```
+ *
+ * @module
+ */
 
+/**
+ * A unique symbol used to define and access the instance field of a singleton class
+ *
+ * @example Usage
+ * ```ts
+ * import { Singleton, SINGLETON_KEY } from "@tstk/decorators"
+ *
+ * @Singleton
+ * class Example {}
+ *
+ * const instance = new Example()
+ * console.log(Example[SINGLETON_KEY] === instance) // prints `true`
+ * ```
+ */
+export const SINGLETON_KEY: unique symbol = Symbol();
+
+/**
+ *  Type definition for Singleton decorator to ensure proper lsp support.
+ */
 // deno-lint-ignore no-explicit-any
 export type Singleton<T extends new (...args: Array<any>) => any> =
   & T
@@ -10,7 +45,19 @@ export type Singleton<T extends new (...args: Array<any>) => any> =
   };
 
 /**
- *  Extends a given class to ensure there is only ever a single instance
+ * Extends a given class to ensure there is only ever a single instance.
+ *
+ * @example Usage
+ * ```ts
+ * import { Singleton } from "@tstk/decorators"
+ *
+ * @Singleton
+ * class Example {}
+ *
+ * const instance1 = new Example()
+ * const instance2 = new Example()
+ * console.log(instance1 === instance2) // prints `true`
+ * ```
  */
 // deno-lint-ignore no-explicit-any
 export function Singleton<T extends new (...args: Array<any>) => any>(
