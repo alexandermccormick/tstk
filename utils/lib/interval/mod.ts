@@ -1,5 +1,15 @@
 /**
  * A Utility class for managing intervals
+ *
+ * @example Usage
+ * ```ts
+ * import { Interval } from "@tstk/utils";
+ *
+ * let count = 0;
+ * const myInterval = new Interval(() => count++, 1000); // Increment count ever second
+ * ```
+ *
+ * @module
  */
 export class Interval {
   private args: Parameters<typeof setInterval>;
