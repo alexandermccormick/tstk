@@ -15,7 +15,10 @@
  * @module
  */
 
-import { filterInPlace, type FilterPredicate } from "@tstk/utils/array";
+import {
+  filterInPlace,
+  type FilterPredicate,
+} from "@tstk/utils/array/filter_in_place";
 /**
  * An extended implimentation of the "Array" built-in object.
  */
