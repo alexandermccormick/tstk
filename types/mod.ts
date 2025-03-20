@@ -1,6 +1,21 @@
 /**
  * A collection of universal type utilities
  *
+ * @example Usage
+ * ```ts
+ * import { Concrete } from "@tstk/types";
+ *
+ * interface User {
+ *   email: string;
+ *   phone?: string;
+ * }
+ *
+ * type CallableUser = Concrete<User>; // type CallableUser = {
+ *                                     //   email: string,
+ *                                     //   phone: string
+ *                                     // };
+ * ```
+ *
  * @module
  */
 
