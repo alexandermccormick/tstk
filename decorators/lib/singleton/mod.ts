@@ -36,13 +36,10 @@ export const SINGLETON_KEY: unique symbol = Symbol();
  *  Type definition for Singleton decorator to ensure proper lsp support.
  */
 // deno-lint-ignore no-explicit-any
-export type Singleton<T extends new (...args: Array<any>) => any> =
-  & T
-  & {
-    // deno-lint-ignore no-explicit-any
-    [SINGLETON_KEY]: T extends new (...args: Array<any>) => infer I ? I
-      : never;
-  };
+export type Singleton<T extends new (...args: Array<any>) => any> = T & {
+  // deno-lint-ignore no-explicit-any
+  [SINGLETON_KEY]: T extends new (...args: Array<any>) => infer I ? I : never;
+};
 
 /**
  * Extends a given class to ensure there is only ever a single instance.

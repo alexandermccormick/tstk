@@ -20,6 +20,23 @@
  */
 
 /**
+ * Get the element type of a typed array
+ *
+ * @example Usage
+ * ```ts
+ * import { ArrayElement } from "@tstk/types";
+ *
+ * const myArr = [{ name: "alex", age: 31 }, { name: "alice", age: 27}];
+ *
+ * const matchingElement: ArrayElement = {
+ *   name: "bob",
+ *   age: "40"  // Type Error: string is not assignable to type 'number'
+ * };
+ * ```
+ */
+export type ArrayElement<T> = T extends (infer Element)[] ? Element : never;
+
+/**
  * Make all properties in T required
  *
  * @example Usage
