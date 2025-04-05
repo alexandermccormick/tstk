@@ -28,7 +28,7 @@
  *
  * const myArr = [{ name: "alex", age: 31 }, { name: "alice", age: 27}];
  *
- * const matchingElement: ArrayElement = {
+ * const matchingElement: ArrayElement<typeof myArr> = {
  *   name: "bob",
  *   age: "40"  // Type Error: string is not assignable to type 'number'
  * };
