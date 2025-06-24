@@ -7,6 +7,7 @@
     "./array": "./lib/array/mod.ts",
     "./array/filter_in_place": "./lib/array/filter_in_place.ts",
     "./array/shuffle_in_place": "./lib/array/shuffle_in_place.ts",
+    "./array/get-random-index": "./lib/array/get-random-index.ts",
     "./interval": "./lib/interval/mod.ts",
     "./performance": "./lib/performance/mod.ts",
     "./performance/quick-time": "./lib/performance/quick-time.ts"
