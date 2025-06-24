@@ -1,12 +1,12 @@
 {
   "name": "@tstk/utils",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "license": "MIT",
   "exports": {
     ".": "./mod.ts",
     "./array": "./lib/array/mod.ts",
-    "./array/filter_in_place": "./lib/array/filter_in_place.ts",
-    "./array/shuffle_in_place": "./lib/array/shuffle_in_place.ts",
+    "./array/filter-in-place": "./lib/array/filter_in_place.ts",
+    "./array/shuffle-in-place": "./lib/array/shuffle_in_place.ts",
     "./array/get-random-index": "./lib/array/get-random-index.ts",
     "./interval": "./lib/interval/mod.ts",
     "./performance": "./lib/performance/mod.ts",
