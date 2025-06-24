@@ -10,7 +10,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  jsr:
+  jsr_publish:
+    name: "Publish New Package Versions"
     runs-on: ubuntu-latest
     permissions:
       contents: read
