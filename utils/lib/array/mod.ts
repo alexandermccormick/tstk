@@ -16,4 +16,4 @@
  */
 export * from "./filter_in_place.ts";
 export * from "./shuffle_in_place.ts";
-export * from "./get-random-index.ts";
+export * from "./get_random_index.ts";

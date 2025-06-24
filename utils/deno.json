@@ -5,11 +5,11 @@
   "exports": {
     ".": "./mod.ts",
     "./array": "./lib/array/mod.ts",
-    "./array/filter-in-place": "./lib/array/filter_in_place.ts",
-    "./array/shuffle-in-place": "./lib/array/shuffle_in_place.ts",
-    "./array/get-random-index": "./lib/array/get-random-index.ts",
+    "./array/filter_in_place": "./lib/array/filter_in_place.ts",
+    "./array/shuffle_in_place": "./lib/array/shuffle_in_place.ts",
+    "./array/get_random_index": "./lib/array/get_random_index.ts",
     "./interval": "./lib/interval/mod.ts",
     "./performance": "./lib/performance/mod.ts",
-    "./performance/quick-time": "./lib/performance/quick-time.ts"
+    "./performance/quick_time": "./lib/performance/quick_time.ts"
   }
 }

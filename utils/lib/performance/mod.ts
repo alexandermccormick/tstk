@@ -14,4 +14,4 @@
  *
  * @module
  */
-export * from "./quick-time.ts";
+export * from "./quick_time.ts";
