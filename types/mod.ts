@@ -59,6 +59,42 @@ export type Concrete<T> = {
 };
 
 /**
+ * Construct and interface containing ONLY the properties of a
+ * given opject.
+ *
+ * @example Usage
+ * ```ts
+ * import { PropsertiesOf } from "@tstk/types";
+ *
+ * class User {
+ *   name: string;
+ *   email: string;
+ *   phone: string;
+ *   age: number;
+ *
+ *   constructor(cfg: PropsertiesOf<User>) {
+ *     this.name = cfg.name;
+ *     this.email = cfg.email;
+ *     this.phone = cfg.phone;
+ *     this.age = cfg.age;
+ *
+ *     console.log(cfg.login); // Uncaught TypeError: cfg.login is not a function
+ *     console.log("login" in cfg); // false
+ *   }
+ *
+ *   login() {
+ *     ...
+ *   }
+ * }
+ * ```
+ */
+export type PropsertiesOf<T> = {
+  // We want to capture all function types
+  // deno-lint-ignore ban-types
+  [K in keyof T as T[K] extends Function ? never : K]: T[K];
+};
+
+/**
  * Returns the type of Object property values
  *
  * @example Usage
