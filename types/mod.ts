@@ -95,6 +95,25 @@ export type PropsertiesOf<T> = {
 };
 
 /**
+ * Assert all properties of a given object are not null
+ *
+ * @example Usage
+ * ```ts
+ * import { NonNullableProps } from "@tstk/types";
+ *
+ * interface User {
+ *   id: number | null;
+ *   name: string | null;
+ * }
+ *
+ * type SafeUser = NonNullableProps<User>; // SafeUser: { id: number; name: string }
+ * ```
+ */
+export type NonNullableProps<T> = {
+  [K in keyof T]: NonNullable<T[K]>;
+};
+
+/**
  * Returns the type of Object property values
  *
  * @example Usage
