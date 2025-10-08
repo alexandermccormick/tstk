@@ -16,3 +16,4 @@
  * @module
  */
 export * from "./lib/singleton/mod.ts";
+export * from "./lib/single-use/mod.ts";

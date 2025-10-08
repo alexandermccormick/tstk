@@ -1,9 +1,10 @@
 {
   "name": "@tstk/decorators",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "exports": {
     ".": "./mod.ts",
-    "./singleton": "./lib/singleton/mod.ts"
+    "./singleton": "./lib/singleton/mod.ts",
+    "./single-use": "./lib/single-use/mod.ts"
   }
 }
